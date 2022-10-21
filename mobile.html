@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;">
+    <noscript>
+        <meta HTTP-EQUIV="Refresh" CONTENT="0;URL=noscript.html">
+      </noscript>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <title>Plomns' Portfolio</title>
+        <meta name="description" content="Welcome to my Portfolio!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/mobile.css">
+    </head>
+    <body class="bgs">
+        <script src="./node_modules/animejs/lib/anime.min.js"></script>
+        <script>
+            if (screen.width >= 800) {
+              document.location = "index.html";
+            }
+          </script>
+        <nav id="nav">
+            <a href="#chars" class="text navLinks">Characters</a>
+            <a href="#objects" class="text navLinks">Objects</a>
+            <a href="#scenes" class="text navLinks">Scenes</a>
+            <a href="#contact" class="text navLinks">Contact me</a>
+        </nav>
+        <img id="themeIcon" src="./images/moon.svg" onclick="themeToggle()"></img>
+        <h1 id="mainTitle" class="hellow text">Plomns' Portfolio</h1>
+
+        <section style="text-align: center; margin-top: 250%;">
+            <h1 id="chars" style="font-size: 60px;" class="text">Characters</h1>
+            <div class="gallery">
+                <img src="./images/characters/test1.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+        </section>
+
+        <section style="text-align: center; margin-top: 50vh;">
+            <h1 id="objects" style="font-size: 60px;" class="text">Objects</h1>
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+        </section>
+
+        <section style="text-align: center; margin-top: 50vh;">
+            <h1 id="scenes" style="font-size: 60px;" class="text">Scenes</h1>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+
+            <div class="gallery">
+                <img src="./images/characters/test2.png" alt="Test1" title="Shrek 1" width="20%" height="20%">
+            </div>
+        </section>
+
+        <section style="text-align: center; margin-top: 50vh;">
+            <h1 id="contact" style="font-size: 60px;" class="text">Contact Info</h1>
+            <h2 class="text">
+                * Discord: plomns#1619
+                * Email: mamoonaljumaili@yahoo.com
+                * Instagram: plomnsart
+            </h2>
+        </section>
+
+        <script>
+            function themeToggle() {
+                var Image_Id = document.getElementById('themeIcon');
+                var text = document.querySelectorAll('.text');
+                var bgs = document.querySelectorAll('.bgs');
+            
+                if (Image_Id.src.match("./images/moon.svg")) {
+                    Image_Id.src = "./images/sun.svg";
+                    for(var i=0; i<bgs.length; i++){
+                        bgs[i].style.backgroundColor = "black";
+                    }
+
+                    for(var i=0; i<text.length; i++){
+                        text[i].style.color = "white";
+                    }
+                }
+                else {
+                    Image_Id.src = "./images/moon.svg";
+                    for(var i=0; i<bgs.length; i++){
+                        bgs[i].style.backgroundColor = "white";
+                    }
+
+                    for(var i=0; i<text.length; i++){
+                        text[i].style.color = "black";
+                    }
+                }
+            }
+            anime({
+                targets: ".hellow",
+                translateX: 50,
+                duration: 2500
+                });
+            anime({
+                targets: ".navLinks",
+                translateY: 50,
+                delay: anime.stagger(500,"first"),
+                });
+        </script>
+    </body>
+</html>

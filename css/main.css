@@ -1,0 +1,94 @@
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #7d7d7d #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #7d7d7d;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+body {
+    overflow-x: hidden;
+}
+
+#mainTitle {
+    font-size: 25vh;
+    font-family: Arial;
+    color: black;
+    position: absolute;
+    top: 5vh;
+}
+
+.gallery {
+    margin: 5px;
+    width: 180px;
+    display: inline;
+    list-style: none;
+}
+
+#themeIcon {
+    position: fixed;
+    right: 2%;
+    top: 5%;
+    width: 50px;
+}
+
+#themeIcon:hover {
+    width: 60px;
+}
+
+body {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#nav {
+    display: inline-block;
+    position: sticky;
+    width: 7%;
+    height: 85vh;
+    top: 1%;
+    left: -200px;
+    z-index: 5;
+}
+
+.navLinks {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-top: 10vh;
+    width: 10vw;
+    height: auto;
+    background: #7d7d7d;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.navLinks:hover {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 10px 10px darkgray;
+}
